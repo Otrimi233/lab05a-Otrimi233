@@ -6,23 +6,23 @@ int main()
     WordCount w;
     
     // incrWordCount
-    assertEquals(1, w.incrWordCount("hi"), "Error: w.incrWordCount() should return 1.", 11);
-    //assertEquals(2, w.incrWordCount("Hi"), "Error: w.incrWordCount() should return 2.", 12);
-    //assertEquals(3, w.incrWordCount("-H@I'"), "Error: w.incrWordCount() should return 3.", 13);
+    ASSERT_EQUALS(1, w.incrWordCount("hi"));
+    ASSERT_EQUALS(2, w.incrWordCount("Hi"));
+    ASSERT_EQUALS(3, w.incrWordCount("-H@I'"));
 
     // getTotalWords
-    //assertEquals(3, w.getTotalWords(), "Error: w.getTotalWords() should return 3.", 16);
+    ASSERT_EQUALS(3, w.getTotalWords());
 
     // getNumUniqueWords
-    //assertEquals(1, w.getNumUniqueWords(), "Error: w.getNumUniqueWords() should return 1.", 19);
+    ASSERT_EQUALS(1, w.getNumUniqueWords());
 
     // decrWordCount
-    //assertEquals(2, w.decrWordCount("HI"), "Error: w.decrWordCount() should return 2.", 22);
-    //assertEquals(-1, w.decrWordCount("bye"), "Error: w.decrWordCount() should return -1.", 23);
+    ASSERT_EQUALS(2, w.decrWordCount("HI"));
+    ASSERT_EQUALS(-1, w.decrWordCount("bye"));
 
-    //assertEquals(2, w.getTotalWords(), "Error: w.getTotalWords() shoudl return 2.", 25);
+    ASSERT_EQUALS(2, w.getTotalWords());
 
-    //assertEquals(1, w.getNumUniqueWords(), "Error: w.getNumUniqueWords() should return 1.", 27);
+    ASSERT_EQUALS(1, w.getNumUniqueWords());
 
     return 0;
 }
