@@ -64,6 +64,11 @@ int WordCount::getWordCount(std::string word) const
 int WordCount::incrWordCount(std::string word)
 {
 	word = makeValidWord(word);
+	if (word == "")
+	{
+		return 0;
+	}
+	
 	size_t h = hash(word);
 	if (getWordCount(word))
 	{
