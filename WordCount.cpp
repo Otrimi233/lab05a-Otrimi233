@@ -135,17 +135,24 @@ std::string WordCount::makeValidWord(std::string word)
 	
 	while (true)
 	{
-		if (result[0] == '-' || result[0] == '\'')
+		if (result.size() != 0)
 		{
-			result.erase(0, 1);
-		}
-		else if (result[result.length() - 1] == '-' || result[result.length() - 1] == '\'')
-		{
-			result.pop_back();
+			if (result[0] == '-' || result[0] == '\'')
+			{
+				result.erase(0, 1);
+			}
+			else if (result[result.length() - 1] == '-' || result[result.length() - 1] == '\'')
+			{
+				result.pop_back();
+			}
+			else
+			{
+				return result;
+			}
 		}
 		else
 		{
-			return result;
+			return "";
 		}
 	}
 }
